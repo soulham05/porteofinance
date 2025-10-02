@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Contenu principal : occupe l'espace restant */
+.main-content {
+  margin-left: 250px; /* Décalage pour prendre en compte la sidebar */
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: #121212; /* Fond sombre pour correspondre à l'esthétique */
+}
+
+/* Global container for each page */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 20px); /* Ajuste pour exclure les marges */
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #121212; /* Conserve un fond sombre */
+}
+
+/* Styling for iframe */
+.report-iframe {
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur maximale pour éviter trop d'étirement */
+  height: 100%;
+  min-height: 600px; /* Garantit une hauteur suffisante */
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px; /* Coins arrondis pour un effet esthétique */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main-content {
+    margin-left: 180px;
+  }
+}
